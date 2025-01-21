@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="./asserts/search_styles.css">
+  <link rel="icon" type="image/png" href="./assets/images/icon.jpg">
+
+  <style>
+    /* Define your CSS styles here */
+  </style>
+</head>
+
+<body>
+  <h1 id="heading">Trip Plan</h1>
+  <div class="cards">
+    <!-- Cards will be appended here using JavaScript -->
+  </div>
+  <br>
+
+  <div class="container">
+    <button id="download" class="download-button">
+      <div class="docs">
+        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2"
+          stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+          <path
+            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line y2="13" x2="8" y1="13" x1="16"></line>
+          <line y2="17" x2="8" y1="17" x1="16"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg> Download
+      </div>
+      <div class="download">
+        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2"
+          stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+          <path
+            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line y2="3" x2="12" y1="15" x1="12"></line>
+        </svg>
+      </div>
+    </button>
+  </div>
+  <script>
+    var jsonData = {
+    "_id": "6424d2b113185d8420fdb6fc",
+    "plan": [
+      {
+        "day": 1,
+        "activities": [
+          {
+            "time": "9:00 AM",
+            "description": "Arrive in London and check-in to hotel"
+          },
+          {
+            "time": "11:00 AM",
+            "description": "Visit the British Museum"
+          },
+          {
+            "time": "2:00 PM",
+            "description": "Take a tour of the Tower of London"
+          },
+          {
+            "time": "6:00 PM",
+            "description": "Take a stroll through Hyde Park"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "activities": [
+          {
+            "time": "9:00 AM",
+            "description": "Visit Buckingham Palace"
+          },
+          {
+            "time": "11:00 AM",
+            "description": "Explore the famous Trafalgar Square"
+          },
+          {
+            "time": "2:00 PM",
+            "description": "Have lunch at Covent Garden Market"
+          },
+          {
+            "time": "4:00 PM",
+            "description": "Visit the London Eye"
+          },
+          {
+            "time": "6:00 PM",
+            "description": "Take a walk along the River Thames"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "activities": [
+          {
+            "time": "9:00 AM",
+            "description": "Visit the Houses of Parliament"
+          },
+          {
+            "time": "11:00 AM",
+            "description": "Take a tour of Westminster Abbey"
+          },
+          {
+            "time": "2:00 PM",
+            "description": "Visit the Tate Modern art museum"
+          },
+          {
+            "time": "5:00 PM",
+            "description": "Enjoy a traditional English afternoon tea"
+          },
+          {
+            "time": "7:00 PM",
+            "description": "Watch a musical performance at the West End"
+          }
+        ]
+      }
+    ],
+    "key": "3-london,uk"
+  }
+
+    function createHTMLCard(day_no, plan) {
+      var newele1 = document.createElement('div');
+      newele1.setAttribute('class', 'card-container');
+      var newele2 = document.createElement('div');
+      newele2.setAttribute('class', 'card');
+      var newele3 = document.createElement('div');
+      newele3.setAttribute('class', 'front-content');
+      var dayy_no = document.createElement('h3');
+      dayy_no.innerHTML = "Day " + day_no;
+      newele3.appendChild(dayy_no);
+      var newele4 = document.createElement('div');
+      newele4.setAttribute('class', 'content');
+      var newele5 = document.createElement('ul');
+      
+      var activities = plan[day_no - 1].activities;
+      
+      for (var i = 0; i < activities.length; i++) { // Declare 'i' variable with 'var'
+        var newele6 = document.createElement('li');
+        newele6.setAttribute('class', 'activity');
+        var newele7 = document.createElement('strong');
+        newele7.innerHTML = activities[i].time + " : ";
+        newele6.appendChild(newele7);
+        var newele8 = document.createElement('span');
+        newele8.innerHTML = activities[i].description;
+        newele6.appendChild(newele8);
+        newele5.appendChild(newele6);
+      }
+      newele2.appendChild(newele3);
+      newele2.appendChild(newele4);
+      newele4.appendChild(newele5);
+      newele1.appendChild(newele2);
+      return newele1;
+    }
+
+    function createTripPlan(jdata) { // Renamed 'cerateTripPlan' to 'createTripPlan'
+      var heading = document.getElementById('heading');
+      var dest = jdata.key;
+      heading.innerHTML = "Trip Plan to " + dest.substring(2) + " for " + dest.substring(0, 1) + " days";
+      for (var i1 = 0; i1 < jdata.plan.length; i1++) {
+        var card = createHTMLCard(i1 + 1, jdata.plan);
+        document.querySelector('.cards').appendChild(card); // Used querySelector instead of getElementsByClassName
+      }
+    }
+
+    createTripPlan(jsonData); // Called the correct function name
+
+  </script>
+    <script>
+        var download = document.getElementById('download');
+        download.addEventListener('click', function () {
+          window.print();
+        })
+      </script>
+</body>
+
+</html>
