@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Planner</title>
+  <link rel="stylesheet" href="./asserts/styles.css">
+  <script src="./asserts/script.js" defer></script>
+  <link rel="website icon" type="png" href="./asserts/images/icon.jpg">
+  <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css”/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header id="header">
+    <img src="./asserts/images/main.jpg" alt="">
+    <nav class="tabs-container ">
+      <a href="#Home" class="tab1">Home</a>
+      <a href="#How_to_use" class="tab">How to Use?</a>
+      <a href="#search" class="tab">Search</a>
+      <a href="#About_us" class="tab">About Us</a>
+      <a href="" target="_self" id="acc_in_sign">Sign In</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" id="Home">
+      <h1>Home</h1>
+      <div class="home-full">
+        <div class="matter">
+          
+          <p>The Trip Planner is a cutting-edge and revolutionary AI-powered website that has been meticulously crafted to revolutionize the way travelers plan their trips. With the main objective of providing personalized and detailed trip plans, the platform aims to assist users in creating unforgettable and enjoyable travel experiences. Whether it's an adventurous solo journey, a romantic getaway, a family vacation, or a group expedition, The Trip Planner has been designed to cater to the specific preferences and interests of each traveler.</p>
+        </div>
+        <div id="carousel-wrapper">
+          <div id="menu">
+              <div id="current-option">
+                <span id="current-option-text1" data-previous-text="" data-next-text=""></span>
+                <span id="current-option-text2" data-previous-text="" data-next-text=""></span>
+              </div>
+              <button id="previous-option"></button>
+              <button id="next-option"></button>
+          </div>
+          <div id="image"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="How_to_use">
+      <h1>How to Use Our Trip Plan Generator:</h1>
+      <p>Welcome to our user-friendly trip plan generator! Planning your dream vacation has never been easier. Follow these simple steps to create a customized trip plan for your desired destination and duration:</p>
+      <ol>
+        <li><strong>Create an Account:</strong> If you're a new user, start by creating an account on our website. This will give you access to the full range of features and options available for planning your trip.</li>
+        <li><strong>Navigate to the Search Section:</strong> After logging in, you'll be directed to the homepage. Locate and click on the "Search" section or button to begin crafting your personalized trip plan.</li>
+        <li><strong>Enter Destination and Trip Duration:</strong> In the "Search" section, you'll find fields to enter your desired destination and the number of days you plan to spend on your trip. Whether it's a relaxing beach getaway, an adventurous mountain trek, or an urban exploration, our trip plan generator can cater to all types of vacations.</li>
+        <li><strong>Click "Generate Plan":</strong> Once you've entered your destination and trip duration, click on the "Generate Plan" button. Our advanced algorithm will process your input and create a comprehensive trip plan that includes recommendations for activities, attractions, dining, and accommodations.</li>
+        <li><strong>Review and Obtain Your Trip Plan:</strong> After a brief processing period, your personalized trip plan will be ready. Explore the suggested itinerary, which will be broken down day by day, ensuring you make the most of your time at your chosen destination. Each day's plan will provide details on the recommended places to visit and things to do.</li>
+        <li><strong>Download or Print Your Trip Plan:</strong> Once you're satisfied with your trip plan, you have the option to either download it in a digital format or print it out. Having a copy can be handy while you're on the go, ensuring you have all the essential details readily available.</li>
+      </ol>
+      <p>Start planning your next adventure with our user-friendly trip plan generator today! Whether you're a solo traveler, a couple, or a family, our tool is designed to help you create unforgettable travel experiences. Happy journey planning!</p>
+    </section>
+    <div class="section" id="search">
+      <div class="popbox">
+        <div class="overlay" id="overlay">
+            <div class="popup">
+            <h2>Pease Wait</h2>
+            <p>your Trip is being generated</p>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="form">
+            <h2>Search</h2>
+            <div class="inputbox">
+                <input type="text" required="required" id="destinantion">
+                <span>Destination</span>
+                <i></i> 
+                <div class="slide">
+                </div>
+            </div>
+            <div class="inputbox">
+                <input type="text" required="required" id="days">
+                <span >Number of days</span>
+                <i></i>
+            </div>
+            <div><span class="spinner spinner-slow activee"></span></div>
+              <div class="links">
+                <button id="Search" class="searchbutton">Generate Plan</button>
+              </div>       
+        </div>
+    </div>
+    <div >
+      <p class="textt">Haven't yet decided your destination explore these</p><a class="linkk" href="destinations.html">click here</a>
+    </div>
+    </div>
+
+
+    <section class="section" id="About_us">
+      <h1>About Us </h1>
+      <div class="devlopers">
+       <div class="dev1">
+        <div class="card">
+          <div class="card-info">
+          <div class="card-avatar"></div>
+          <div class="card-title">Ganesh</div>
+          <div class="card-subtitle">Web developer</div>
+          </div>
+          <ul class="card-social">
+          <li class="card-social__item">
+            <a href="https://github.com/vvsgk">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+            </a>
+          </li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-info">
+    <div class="card-avatar1"></div>
+    <div class="card-title">Siddu</div>
+    <div class="card-subtitle">Cyber Security Analyst</div>
+    </div>
+    <ul class="card-social">
+      <li class="card-social__item">
+        <a href="https://github.com/Siddhartha1215">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+        </a>
+      </li>
+</ul>
+</div>
+</div> 
+
+<div class="dev2">
+<div class="card">
+  <div class="card-info">
+  <div class="card-avatar2"></div>
+  <div class="card-title">Vamsi</div>
+  <div class="card-subtitle">AI Integration</div>
+  </div>
+  <ul class="card-social">
+    <li class="card-social__item">
+      <a href="https://github.com/Vamsi216522">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    </li>
+</ul>
+</div>
+</div>
+      </div>
+    </section>
+
+
+    <footer>
+      <h2 style="text-align: center;">Testimonials</h2>
+
+      <div class="container__feed">
+        <div class="feedback__container">
+            <div class="feed_box">
+                <div class="user_icon">
+                </div>
+                <ul class="feed__hed">
+                    <li class="usr_img"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg></li>
+                    <li>
+                        <h1>Murari</h1>
+                    </li>
+                </ul>
+                <div class="feed_txt">
+                    <summary>
+                      I used the trip planner for my vacation and it was a game-changer. Creating an account was easy, and the interface was user-friendly. The generated itinerary balanced popular spots and hidden gems perfectly. Customization options were a plus, and being able to download/print the plan was super convenient. A must-have tool for stress-free travel planning!
+                    </summary>
+                </div>
+                <ul class="feed_foot">
+                    <li>Feb 21, 2024</li>
+                </ul>
+            </div>
+            <div class="feed_box">
+                <div class="user_icon">
+                </div>
+                <ul class="feed__hed">
+                    <li class="usr_img"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg></li>
+                    <li>
+                        <h1>Kamal</h1>
+                    </li>
+                </ul>
+                <div class="feed_txt">
+                    <summary>
+                      This trip planner is a travel enthusiast's dream come true. The account setup was seamless, and the user interface was incredibly intuitive. The generated itinerary struck a great balance between well-known attractions and local gems, making every day of my vacation exciting. The ability to personalize the plan added a personal touch, and the option to download and print ensured I had my plans at my fingertips. This website is now my go-to for trip planning – it's a total game-changer!
+                    </summary>
+                </div>
+                <ul class="feed_foot">
+                    <li>Mar 22, 2024</li>
+                </ul>
+            </div>
+            <div class="feed_box">
+              <div class="user_icon">
+              </div>
+              <ul class="feed__hed">
+                  <li class="usr_img"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg></li>
+                  <li>
+                      <h1>Ankan</h1>
+                  </li>
+              </ul>
+              <div class="feed_txt">
+                  <summary>
+                    Discovering this trip planning website was like finding a hidden treasure. Registering was a breeze, and the interface felt like second nature. The generated itinerary was a masterpiece, blending popular must-sees with off-the-beaten-path delights, creating an unforgettable journey. Tweaking the plan to my tastes was delightful, and the downloadable/printable feature was a stroke of genius. A definite must-use tool for anyone looking to turn their vacation dreams into reality!                  </summary>
+              </div>
+              <ul class="feed_foot">
+                  <li>Apr 30, 2024</li>
+              </ul>
+          </div>
+        </div>
+    </div>
+    <div class="trust">
+      <h3>Trusted By</h3>
+    </div>
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+      </div>
+    </div>
+      <br>
+    <div class="contact_us">
+      
+      <a  class="contactt" href="contact_us.html">Need Help : Contact US?</a>
+    </div>
+    </footer>
+
+  </main>
+  <script src="asserts/final.js"></script>
+  <script>
+      window.addEventListener('message', (event) => {
+        console.log("welcome");
+        const message = event.data;
+        if (message.type === 'login_success') {
+          console.log('login_success');
+          var acc_in_sign = document.getElementById('acc_in_sign');
+          const encodedMessage = encodeURIComponent(JSON.stringify(message));
+          const accountURL = 'account.html?data=' + encodedMessage;
+          acc_in_sign.innerHTML = "My Account";
+          acc_in_sign.setAttribute('href', accountURL);
+        }
+      });
+  </script>
+</body>
+</html>

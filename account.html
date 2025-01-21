@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY ACCOUNT</title>
+   <link rel="icon" href="./img/profile1.png">
+   <link rel="website icon" type="png" href="./asserts/images/icon.jpg">
+   <style>
+    
+*{
+    box-sizing: border-box;
+    font-family: Arial, 
+    Helvetica, sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background: #D4E2D4;
+}
+
+.accinfo{
+    
+    display: flex;
+    padding: 50px 50px 50px 50px;
+    justify-content: center;
+    
+    
+}
+.details{
+    margin-top: 45px;
+    margin-left: 20px;
+}
+.person img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+.trp {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+    font-size: 40px;
+    background:gray;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+   
+}
+h1:hover{
+    transform: scale3d(1, 1, 1);
+    
+}
+.container{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+img{
+    width: 280px;
+    height: 360px;
+}
+
+.card{
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    margin: 1rem;
+    background: #D4E2D4;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    position: relative; 
+    
+}
+
+.card:hover{
+    transform: translateY(20px);
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.card::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0; 
+}
+
+.card:hover:before{
+    opacity: 1;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.card .intro {
+    position: relative;
+    z-index: 3;
+    color: #D4E2D4;
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s; 
+    height: 100%;
+}
+
+.card:hover .intro {
+    opacity: 1; 
+    transform: translateY(20px);
+}
+
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+   </style>
+
+</head>
+<body>
+    <h1 style="text-align: center;">MY ACCOUNT INFO</h1>
+    <div class="accinfo">
+        
+        <div class="person">
+            <img src="./asserts/images/person.jpg" alt="#" class="img">
+            
+        </div>
+        <div class="details">
+            <p id="user_id"><strong>User ID</strong> : Ganesh Kumar</p>
+            <p id="Password"> <strong>Password </strong>: Vganesh@2106</p>
+            
+        </div>
+    </div>
+        
+    
+<br>
+<br>
+    <div class="container"><br>
+        <h1 style="text-align: center;" class="trp">MY TRIPS</h1>
+        <div class="card">
+            <img src="./asserts/images/australia.jpeg" alt="Australia Image">
+            <div class="intro">
+                <p>Home to unique wildlife, where kangaroos and koalas roam with pride.
+                    A rich tapestry of cultures, blending ancient indigenous heritage with modern multiculturalism.
+                    Aussies embrace adventure, from surfing swells to exploring the vast, untamed wilderness.</p>
+                <a href="https://www.expedia.co.in/Melbourne-Hotels-Travelodge-Hotel-Melbourne-Docklands.h3033860.Hotel-Information?chkin=2023-09-17&chkout=2023-09-18&x_pwa=1&rfrr=HSR&pwa_ts=1691263448387&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jby5pbi9Ib3RlbC1TZWFyY2g%3D&useRewards=false&rm1=a2&regionId=2261&destination=Melbourne%2C+Victoria%2C+Australia&destType=MARKET&neighborhoodId=6131565&selected=3033860&latLong=-37.81513%2C144.96075&sort=RECOMMENDED&top_dp=8273&top_cur=INR&mdpcid=in.META.BHA.HOTEL-CORESEARCH-propertypromotionad-desktop.HOTEL&mdpdtl=HTL.3033860.20230917.20230918.DDT.43.USD.9100.190000.EN.INR.2.602998918.&mctc=10&userIntent=&selectedRoomType=428799&selectedRatePlan=205409395&searchId=919c8203-9d2d-48ec-857e-8e3efc60d846" class="btn">know more</a> 
+            </div> 
+        </div>
+
+        <div class="card">
+            <img src="./asserts/images/india.jpg" alt="India Image">
+            <div class="intro">
+                <p>From the iconic Taj Mahal to ancient temples, history and spirituality converge in harmony.
+                    A land of contrasts, where bustling cities coexist with serene rural landscapes.
+                    India's people, warm and hospitable, exude resilience and thrive amidst challenges.</p>
+                <a href="https://www.tripadvisor.in/Hotel_Review-g1162480-d24019190-Reviews-Kaldan_Samudhra_Palace-Mahabalipuram_Kanchipuram_District_Tamil_Nadu.html" class="btn">know more</a> 
+            </div> 
+        </div>
+        <div class="card">
+            <img src="./asserts/images/italy(venice).jpeg" alt="India Image">
+            <div class="intro">
+                <p>Venice, the city of canals and gondolas, floats gracefully in a dreamlike, timeless allure.
+                    A labyrinth of narrow streets and stunning architecture, it echoes a rich Venetian legacy.
+                    Artistic masterpieces, from Venetian painters inspire wonder at every turn.</p>
+                <a href="https://www.booking.com/hotel/it/carltongrandcanal.en-gb.html?aid=339462&label=msn-_Er6T67db9EBzJuNYAY09w-80608055713413%3Atikwd-80608294701349%3Aloc-90%3Aneo%3Amte%3Alp163910%3Adec%3Aqsbest%20hotels%20in%20venice%20italy%20with%20canal%20view&sid=8cd14740be13bec114a2ffc9355c85af&dest_id=8425;dest_type=district;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1691262859;srpvid=71cb874393520063;type=total;ucfs=1&#hotelTmpl" class="btn">know more</a> 
+            </div> 
+        </div>
+    </div>
+
+ <script>
+    const queryParams = new URLSearchParams(window.location.search);
+    const encodedMessage = queryParams.get('data');
+    if (encodedMessage)
+    {
+        const decodedMessage = decodeURIComponent(encodedMessage);
+        const messageData = JSON.parse(decodedMessage);
+        console.log(messageData);
+        var user_id = document.getElementById('user_id');
+        user_id.innerHTML = "<strong>User ID    </strong> :"+ messageData.data.username;
+        var Password = document.getElementById('Password');
+        Password.innerHTML = "<strong>Password    </strong> :"+ messageData.data.password;
+    }
+
+ </script>
+
+</body>
+</html>
