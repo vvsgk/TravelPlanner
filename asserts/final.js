@@ -1,5 +1,6 @@
 const search = document.getElementById("Search");
 const overlay = document.getElementById("overlay");
+
 search.addEventListener("click", async () => {
   const destiElement = document.getElementById("destinantion");
   const desti = destiElement.value;
@@ -16,30 +17,45 @@ search.addEventListener("click", async () => {
     days +
     "&destination=" +
     desti;
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'a02f41a998msh1f739df04df8a5cp16a821jsn7212939afd75',
-		'X-RapidAPI-Host': 'ai-trip-planner.p.rapidapi.com'
-	}
-};
+    
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "c3e1fd53bdmsh631e606fdcd6932p124222jsneca2dd4c00a4",
+      "X-RapidAPI-Host": "ai-trip-planner.p.rapidapi.com",
+    },
+  };
 
   try {
     console.log("Fetching data...");
     overlay.classList.add("active");
     document.body.style.overflow = "hidden";
-    console.log(url);
+
     const response = await fetch(url, options);
     console.log(response);
-    const jsonData = await response.json();
-    console.log(jsonData);
 
-    console.log("Hurrayy! Data received.");
+    if (!response.ok) {
+      throw new Error(`API request failed with status: ${response.status}`);
+    }
+
+    const jsonData = await response.json();
+    console.log("Hurrayy! Data received.", jsonData);
+
     overlay.classList.remove("active");
     document.body.style.overflow = "auto";
+
+    if (!jsonData || Object.keys(jsonData).length === 0) {
+      throw new Error("Empty response from API");
+    }
+
     const encodedData = encodeURIComponent(JSON.stringify(jsonData));
     window.open(`searchresults.html?data=${encodedData}`, "_blank");
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching data:", error);
+    
+    overlay.classList.remove("active");
+    document.body.style.overflow = "auto";
+
+    window.open("error.html", "_blank");
   }
 });
